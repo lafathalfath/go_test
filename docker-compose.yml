@@ -1,0 +1,20 @@
+services:
+  # app:
+  #   build: .
+
+
+  db:
+    image: mysql:8
+    container_name: go_test_db
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: go_test
+      # MYSQL_USER: go_test
+      # MYSQL_PASSWORD: 121212
+    volumes:
+      - go_test_db:/var/lib/mysql
+
+volumes:
+  go_test_db:

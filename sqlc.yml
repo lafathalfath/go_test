@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - engine: "mysql"
+    queries: "internal/query.sql"
+    schema: "internal/schema.sql"
+    gen:
+      go:
+        package: "database"
+        out: "internal/database"
